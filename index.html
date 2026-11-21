@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Count of Monte Cristo — Chapters 1 & 2 Interactive Quiz</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Literary Serif), Inter (Clean Sans), Cairo (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#081221',
+                            900: '#0F213A',
+                            800: '#163154',
+                            700: '#214573',
+                        },
+                        gold: {
+                            300: '#F3D88B',
+                            400: '#E5BF59',
+                            500: '#C89D3C',
+                            600: '#A67E26',
+                        },
+                        parchment: {
+                            50: '#FDFBF7',
+                            100: '#F8F4EC',
+                            200: '#EFE8D8',
+                            300: '#E2D6BE',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        arabic: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F8F4EC;
+            background-image: radial-gradient(#E2D6BE 0.75px, transparent 0.75px);
+            background-size: 20px 20px;
+            color: #1E293B;
+        }
+        .fade-in {
+            animation: fadeIn 0.35s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .arabic-text {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+        }
+        .option-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .option-card:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-gold-300 selection:text-navy-950">
+
+    <!-- Top Literary Maritime Header -->
+    <header class="bg-navy-900 text-parchment-50 border-b-4 border-gold-500 shadow-lg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <!-- Compass / Anchor SVG Icon -->
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-navy-800 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="5" r="3"></circle>
+                        <line x1="12" y1="22" x2="12" y2="8"></line>
+                        <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="font-serif text-lg sm:text-xl font-bold tracking-wide text-parchment-50 leading-tight">
+                        The Count of Monte Cristo
+                    </h1>
+                    <p class="text-xs sm:text-sm text-gold-300 font-medium">
+                        Chapters 1 & 2 • Secondary 3 Curriculum
+                    </p>
+                </div>
+            </div>
+            <div class="hidden sm:block text-right">
+                <span class="inline-block px-3 py-1 rounded-full bg-navy-800 border border-gold-500/30 text-xs text-parchment-200 arabic-text font-semibold">
+                    منهج الصف الثالث الثانوي
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow flex items-center justify-center px-4 py-6 sm:py-10">
+        <div class="w-full max-w-3xl">
+
+            <!-- ================= SCREEN 1: START SCREEN ================= -->
+            <section id="start-screen" class="bg-white rounded-2xl shadow-xl border border-parchment-300 overflow-hidden fade-in">
+                <!-- Decorative Banner -->
+                <div class="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-800 px-6 py-8 sm:px-10 sm:py-10 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
+                        <svg class="w-64 h-64 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                    </div>
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-gold-500/20 border border-gold-400/50 text-gold-300 text-xs font-semibold uppercase tracking-widest mb-3">
+                        Interactive Literature Assessment
+                    </span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white mb-2">
+                        The Count of Monte Cristo
+                    </h2>
+                    <p class="text-parchment-200 text-sm sm:text-base font-medium">
+                        Chapter 1: <span class="text-gold-300 italic">The Arrival at Marseilles</span> &bull; Chapter 2: <span class="text-gold-300 italic">A Treacherous Plot</span>
+                    </p>
+                </div>
+
+                <!-- Content Body -->
+                <div class="p-6 sm:p-8 space-y-6">
+                    <!-- Student Name Input Field (Optional - for Score Card / Screenshot) -->
+                    <div class="bg-navy-900/[0.03] border border-gold-500/40 rounded-xl p-4 sm:p-5">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                            <label for="student-name-input" class="text-sm font-bold text-navy-950 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span>Student Name <span class="text-slate-400 font-normal">(Optional)</span></span>
+                            </label>
+                            <span class="arabic-text text-xs font-semibold text-navy-800">
+                                اسم الطالب (اختياري — ليظهر في شهادة النتيجة)
+                            </span>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="student-name-input" 
+                            maxlength="50"
+                            placeholder="Enter your name / اكتب اسمك هنا..."
+                            class="w-full px-4 py-3 rounded-xl bg-white border-2 border-parchment-300 focus:border-navy-900 focus:outline-none text-sm sm:text-base font-semibold text-navy-950 placeholder:text-slate-400 transition-colors"
+                        />
+                    </div>
+
+                    <!-- Bilingual Instructions -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-parchment-50 border border-parchment-200 rounded-xl p-4">
+                            <h3 class="font-bold text-navy-900 text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                                Quiz Instructions
+                            </h3>
+                            <ul class="text-sm text-slate-700 space-y-2 leading-relaxed">
+                                <li>• <strong>10 varied questions</strong> (Multiple Choice, True/False, and Complete).</li>
+                                <li>• Questions appear <strong>one at a time</strong>. You can navigate back and forth to review your choices.</li>
+                                <li>• Correct answers remain hidden until you submit the quiz.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-parchment-50 border border-parchment-200 rounded-xl p-4 arabic-text">
+                            <h3 class="font-bold text-navy-900 text-base mb-2 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                                تعليمات الاختبار
+                            </h3>
+                            <ul class="text-sm text-slate-700 space-y-2 leading-relaxed">
+                                <li>• يتكون الاختبار من <strong>10 أسئلة متنوعة</strong> باللغة الإنجليزية مطابقة لمنهج الثانوية العامة.</li>
+                                <li>• يظهر <strong>سؤال واحد في كل شاشة</strong>، ويمكنك التنقل لتعديل إجاباتك قبل التسليم.</li>
+                                <li>• تظهر الدرجة من 10 مع <strong>شرح الأخطاء باللغة العربية</strong> في النهاية.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Specs Pills -->
+                    <div class="flex flex-wrap items-center justify-center gap-2.5 pt-1">
+                        <span class="px-3 py-1.5 rounded-lg bg-navy-900/5 text-navy-900 text-xs font-semibold">10 Questions</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-navy-900/5 text-navy-900 text-xs font-semibold">MCQ • True/False • Complete</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-navy-900/5 text-navy-900 text-xs font-semibold">Instant Score & Arabic Explanations</span>
+                    </div>
+
+                    <!-- Start Button -->
+                    <div class="pt-2 text-center">
+                        <button id="start-btn" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-navy-900 hover:bg-navy-800 active:scale-[0.99] text-white font-bold text-base sm:text-lg shadow-lg shadow-navy-900/20 border border-gold-500/40 transition-all flex items-center justify-center gap-3 mx-auto cursor-pointer">
+                            <span>Start Quiz</span>
+                            <span class="text-gold-400">|</span>
+                            <span class="arabic-text font-bold">ابدأ الاختبار</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SCREEN 2: QUIZ SCREEN ================= -->
+            <section id="quiz-screen" class="hidden bg-white rounded-2xl shadow-xl border border-parchment-300 overflow-hidden fade-in">
+                <!-- Progress Header -->
+                <div class="bg-navy-900 px-5 py-4 sm:px-8 border-b border-gold-500/30">
+                    <div class="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-parchment-100 mb-2.5">
+                        <span id="progress-text" class="font-bold tracking-wide text-gold-300">Question 1 of 10</span>
+                        <span id="chapter-badge" class="px-2.5 py-0.5 rounded-md bg-navy-800 text-parchment-200 border border-navy-700 text-xs">
+                            Chapter 1: The Arrival at Marseilles
+                        </span>
+                    </div>
+                    <!-- Visual Progress Bar -->
+                    <div class="w-full h-2.5 bg-navy-950 rounded-full overflow-hidden p-0.5 border border-navy-700">
+                        <div id="progress-bar" class="h-full bg-gradient-to-r from-gold-500 to-gold-300 rounded-full transition-all duration-300" style="width: 10%;"></div>
+                    </div>
+                </div>
+
+                <!-- Question Body -->
+                <div class="p-6 sm:p-8">
+                    <!-- Question Type Tag -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span id="question-type-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-parchment-200 text-navy-900">
+                            Multiple Choice
+                        </span>
+                        <span id="answered-indicator" class="text-xs font-medium text-slate-400">
+                            Not answered yet
+                        </span>
+                    </div>
+
+                    <!-- Question Text -->
+                    <h3 id="question-text" class="text-lg sm:text-xl font-bold text-navy-950 leading-relaxed mb-6">
+                        <!-- Question injected via JS -->
+                    </h3>
+
+                    <!-- Dynamic Answer Container -->
+                    <div id="answer-container" class="space-y-3">
+                        <!-- Options or Input injected via JS -->
+                    </div>
+
+                    <!-- Validation / Warning Banner -->
+                    <div id="validation-msg" class="hidden mt-4 p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-sm flex items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <span id="validation-text">Please select or enter an answer before proceeding.</span>
+                        </div>
+                    </div>
+
+                    <!-- Question Navigator Dots -->
+                    <div class="mt-8 pt-5 border-t border-parchment-200">
+                        <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-6" id="question-dots">
+                            <!-- 10 quick-jump dots injected via JS -->
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="flex items-center justify-between gap-3">
+                            <button id="prev-btn" type="button" class="px-4 sm:px-6 py-3 rounded-xl border-2 border-parchment-300 bg-parchment-50 hover:bg-parchment-200 disabled:opacity-40 disabled:pointer-events-none text-navy-900 font-semibold text-sm sm:text-base transition-all flex items-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                                <span>Previous</span>
+                            </button>
+
+                            <button id="next-btn" type="button" class="px-6 sm:px-8 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-semibold text-sm sm:text-base shadow-md border border-gold-500/30 transition-all flex items-center gap-2 cursor-pointer">
+                                <span id="next-btn-label">Next Question</span>
+                                <svg id="next-btn-icon" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SCREEN 3: RESULTS & ARABIC EXPLANATIONS ================= -->
+            <section id="results-screen" class="hidden space-y-6 fade-in">
+                <!-- Score Summary Card (Screenshot-friendly for sharing with teacher) -->
+                <div class="bg-white rounded-2xl shadow-xl border border-parchment-300 overflow-hidden">
+                    <div class="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-800 px-6 py-8 text-center text-white">
+                        <span class="inline-block px-3 py-1 rounded-full bg-gold-500/20 border border-gold-400/50 text-gold-300 text-xs font-bold uppercase tracking-widest mb-3">
+                            Quiz Completed • تم إنهاء الاختبار
+                        </span>
+
+                        <!-- Student Name Banner (Shown if provided) -->
+                        <div id="result-student-badge" class="hidden mb-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl bg-navy-950/80 border border-gold-400/40 text-parchment-50 text-sm sm:text-base font-bold">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span id="result-student-name"></span>
+                            </span>
+                        </div>
+
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold mb-1">The Count of Monte Cristo</h2>
+                        <p class="text-xs sm:text-sm text-parchment-200 mb-5">Chapters 1 & 2 Assessment Result</p>
+                        
+                        <!-- Score Badge -->
+                        <div class="inline-flex flex-col items-center justify-center w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-navy-950 border-4 border-gold-400 shadow-2xl mb-4">
+                            <div class="flex items-baseline">
+                                <span id="score-number" class="font-serif text-4xl sm:text-5xl font-extrabold text-gold-400">0</span>
+                                <span class="text-xl sm:text-2xl font-bold text-parchment-200 ml-1">/ 10</span>
+                            </div>
+                            <span id="score-percentage" class="text-xs font-bold uppercase tracking-wider text-parchment-300 mt-1">0%</span>
+                        </div>
+
+                        <p id="feedback-en" class="text-base sm:text-lg font-semibold text-parchment-100 max-w-xl mx-auto"></p>
+                        <p id="feedback-ar" class="arabic-text text-base sm:text-lg font-bold text-gold-300 mt-1 max-w-xl mx-auto"></p>
+                    </div>
+
+                    <!-- Stats & Action Bar -->
+                    <div class="p-5 sm:p-6 bg-parchment-50 border-t border-parchment-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-emerald-700 bg-emerald-100/80 px-3 py-1.5 rounded-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span id="correct-count">0</span> Correct
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 font-bold text-rose-700 bg-rose-100/80 px-3 py-1.5 rounded-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                <span id="incorrect-count">0</span> Incorrect
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-2.5 w-full sm:w-auto">
+                            <button id="copy-result-btn" type="button" class="flex-1 sm:flex-initial px-4 py-3 rounded-xl bg-white hover:bg-parchment-100 text-navy-900 font-bold text-sm border-2 border-parchment-300 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-navy-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span id="copy-result-label">Copy Score</span>
+                            </button>
+
+                            <button id="retake-btn" type="button" class="flex-1 sm:flex-initial px-5 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 active:scale-[0.99] text-white font-bold text-sm shadow-md border border-gold-500/40 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="1 4 1 10 7 10"></polyline>
+                                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                                </svg>
+                                <span>Retake</span>
+                                <span class="text-gold-400">|</span>
+                                <span class="arabic-text">إعادة</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Review Header -->
+                <div class="flex flex-wrap items-center justify-between gap-2 px-1">
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-950">
+                        Detailed Answer Review
+                    </h3>
+                    <span class="arabic-text text-sm font-bold text-navy-800 bg-parchment-200 px-3 py-1 rounded-full">
+                        مراجعة الإجابات وشرح الأخطاء
+                    </span>
+                </div>
+
+                <!-- Review List Container -->
+                <div id="review-container" class="space-y-4">
+                    <!-- Question review cards injected via JS -->
+                </div>
+
+                <!-- Bottom Retake Button -->
+                <div class="pt-2 pb-6 text-center">
+                    <button id="retake-btn-bottom" type="button" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-base shadow-lg border border-gold-500/40 transition-all inline-flex items-center justify-center gap-2 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="1 4 1 10 7 10"></polyline>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
+                        <span>Retake Quiz</span>
+                        <span class="text-gold-400">|</span>
+                        <span class="arabic-text">إعادة الاختبار</span>
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-parchment-300/80 text-xs py-4 px-4 text-center border-t border-navy-800">
+        <p>The Count of Monte Cristo (Chapters 1 & 2) • Egyptian Thanaweya Amma English Literature Practice</p>
+    </footer>
+
+    <!-- Quiz Application Logic -->
+    <script>
+        /**
+         * 10 Varied Questions based on the Egyptian Secondary 3 Curriculum
+         * Chapters 1 & 2 of "The Count of Monte Cristo"
+         */
+        const quizQuestions = [
+            {
+                id: 1,
+                chapter: "Chapter 1: The Arrival at Marseilles",
+                type: "mcq",
+                typeLabel: "Multiple Choice",
+                question: "On what date did the ship 'Pharaon' arrive at the port of Marseilles at the beginning of the novel?",
+                options: [
+                    "February 24, 1815",
+                    "March 15, 1814",
+                    "July 14, 1815",
+                    "February 24, 1820"
+                ],
+                correctAnswer: "February 24, 1815",
+                explanationAr: "تبدأ أحداث الرواية بوصول السفينة «فرعون» (Pharaon) إلى ميناء مرسيليا في يوم 24 فبراير عام 1815م، وهو تاريخ مهم جداً لأنه يسبق عودة نابليون بونابرت من منفاه في جزيرة إلبا مباشرة."
+            },
+            {
+                id: 2,
+                chapter: "Chapter 1: The Arrival at Marseilles",
+                type: "true_false",
+                typeLabel: "True or False",
+                question: "Captain Leclère died of a sudden fever during the voyage, leaving young Edmond Dantès in command of the 'Pharaon'.",
+                options: ["True", "False"],
+                correctAnswer: "True",
+                explanationAr: "الإجابة صحيحة (True): توفي القبطان «لوكلير» (Captain Leclère) بسبب حمى مفاجئة أثناء الرحلة البحرية، فتولى الشاب «إدموند دانتيس» (الضابط الأول) قيادة السفينة بكفاءة عالية حتى وصل بها إلى ميناء مرسيليا."
+            },
+            {
+                id: 3,
+                chapter: "Chapter 1: The Arrival at Marseilles",
+                type: "mcq",
+                typeLabel: "Multiple Choice",
+                question: "What was Captain Leclère's dying request to Edmond Dantès?",
+                options: [
+                    "To sell the ship's cargo in Italy and keep the money",
+                    "To stop at the island of Elba to deliver a packet to Marshal Bertrand and take a letter to Paris",
+                    "To resign from the ship and marry Mercédès immediately",
+                    "To hand over command of the Pharaon to Danglars"
+                ],
+                correctAnswer: "To stop at the island of Elba to deliver a packet to Marshal Bertrand and take a letter to Paris",
+                explanationAr: "قبل وفاة القبطان لوكلير، أوصى إدموند دانتيس بالتوقف في جزيرة «إلبا» (Elba) لتسليم طرد إلى المارشال «بيرتراند» (Marshal Bertrand)، ثم أخذ رسالة من الجزيرة لتسليمها إلى شخص في باريس، وهو الأمر البريء الذي استغله أعداؤه لاحقاً لتوريطه."
+            },
+            {
+                id: 4,
+                chapter: "Chapter 1: The Arrival at Marseilles",
+                type: "fill_blank",
+                typeLabel: "Complete the Sentence",
+                question: "Impressed by his skill and honesty, Monsieur Morrel, the owner of the ship, decided to appoint Edmond Dantès as the new ________ of the 'Pharaon'.",
+                hint: "Enter one word (a ship rank/title)",
+                acceptedAnswers: ["captain", "the captain"],
+                displayAnswer: "captain",
+                explanationAr: "أُعجب «مسيو موريل» (Monsieur Morrel) مالك السفينة بشجاعة إدموند وأمانته، فقرر مكافأته وتعيينه «قبطاناً» (captain) جديداً للسفينة «فرعون»، مما أثار حقد وغيرة محاسب السفينة «دانغلار»."
+            },
+            {
+                id: 5,
+                chapter: "Chapter 1: The Arrival at Marseilles",
+                type: "mcq",
+                typeLabel: "Multiple Choice",
+                question: "Why did Danglars, the ship's purser, feel bitter resentment toward Edmond Dantès?",
+                options: [
+                    "Because Edmond accused Danglars of stealing money from the ship",
+                    "Because Danglars wanted to be made captain of the Pharaon himself",
+                    "Because Edmond refused to pay the sailors their wages",
+                    "Because Danglars was secretly in love with Mercédès"
+                ],
+                correctAnswer: "Because Danglars wanted to be made captain of the Pharaon himself",
+                explanationAr: "شعر «دانغلار» (Danglars) محاسب السفينة بالحقد والغيرة الشديدة تجاه إدموند لأنه كان يطمع في أن يصبح هو قبطان السفينة «فرعون» بعد وفاة القبطان لوكلير، كما كان يخشى أن يكشف إدموند تلاعبه في الحسابات."
+            },
+            {
+                id: 6,
+                chapter: "Chapter 1: The Arrival at Marseilles",
+                type: "true_false",
+                typeLabel: "True or False",
+                question: "Fernand Mondego hated Edmond Dantès because Fernand wanted to marry Mercédès, who was deeply in love with Edmond.",
+                options: ["True", "False"],
+                correctAnswer: "True",
+                explanationAr: "الإجابة صحيحة (True): كان «فرناند موندغو» (Fernand Mondego) ابن عم «مرسيدس» يحبها ويريد الزواج منها، لكنها كانت تحب إدموند دانتيس ومخطوبة له، فدفعته الغيرة العمياء إلى الاشتراك في المؤامرة للتخلص من إدموند."
+            },
+            {
+                id: 7,
+                chapter: "Chapter 2: A Treacherous Plot",
+                type: "fill_blank",
+                typeLabel: "Complete the Sentence",
+                question: "Danglars, Fernand, and Caderousse met at a tavern called La Réserve, where Danglars wrote an anonymous letter accusing Edmond of being a ________ agent.",
+                hint: "Enter the political adjective (supporter of Napoleon Bonaparte)",
+                acceptedAnswers: ["bonapartist", "bonaparte", "bonapartiste"],
+                displayAnswer: "Bonapartist",
+                explanationAr: "اجتمع المتآمرون (دانغلار وفرناند وكادروس) في حانة «لا ريزيرف» (La Réserve)، وهناك كتب دانغلار رسالة مجهولة تتهم إدموند زوراً بأنه عميل «بونابرتي» (Bonapartist) أي من أنصار الإمبراطور المنفي نابليون بونابرت."
+            },
+            {
+                id: 8,
+                chapter: "Chapter 2: A Treacherous Plot",
+                type: "mcq",
+                typeLabel: "Multiple Choice",
+                question: "How did Danglars disguise his handwriting when writing the false accusation letter against Edmond?",
+                options: [
+                    "He asked Caderousse to write the letter for him",
+                    "He wrote it with his left hand while pretending to be drunk",
+                    "He cut letters out of a newspaper and glued them together",
+                    "He paid a stranger in the tavern to write it"
+                ],
+                correctAnswer: "He wrote it with his left hand while pretending to be drunk",
+                explanationAr: "لإخفاء خط يده وحتى لا يتم التعرف عليه، تظاهر «دانغلار» بأنه مخمور وكتب رسالة الوشاية الكاذبة بيده اليسرى (left hand) لكي يبدو الخط مائلاً ومختلفاً تماماً عن خطه المعتاد."
+            },
+            {
+                id: 9,
+                chapter: "Chapter 2: A Treacherous Plot",
+                type: "true_false",
+                typeLabel: "True or False",
+                question: "Caderousse eagerly delivered the false accusation letter to the public prosecutor Villefort himself.",
+                options: ["True", "False"],
+                correctAnswer: "False",
+                explanationAr: "الإجابة خاطئة (False): لم يقم «كادروس» (Caderousse) بتوصيل الرسالة؛ بل اعترض في البداية على أذية إدموند واعتبر الأمر مزحة سخيفة، لكنه كان ثملاً وجباناً فلم يمنعهم. أما الذي أخذ الرسالة ووضعها في صندوق بريد النائب العام (فيلفور) فهو «فرناند موندغو»."
+            },
+            {
+                id: 10,
+                chapter: "Chapter 2: A Treacherous Plot",
+                type: "mcq",
+                typeLabel: "Multiple Choice",
+                question: "When did the soldiers arrive to arrest Edmond Dantès?",
+                options: [
+                    "While he was still aboard the 'Pharaon' unloading cargo",
+                    "During his betrothal (engagement) feast with Mercédès",
+                    "While he was visiting his father's grave",
+                    "As he was boarding a carriage to Paris"
+                ],
+                correctAnswer: "During his betrothal (engagement) feast with Mercédès",
+                explanationAr: "اقتحم الجنود المكان وألقوا القبض على إدموند دانتيس في أسعد لحظات حياته، وذلك أثناء حفل خطوبته (betrothal feast) على محبوبته «مرسيدس» بحضور والده المسن وأصدقائه."
+            }
+        ];
+
+        // Application State
+        let currentIndex = 0;
+        let userAnswers = new Array(quizQuestions.length).fill(null);
+        let studentName = "";
+        let lastCalculatedScore = 0;
+
+        // DOM Elements
+        const startScreen = document.getElementById('start-screen');
+        const quizScreen = document.getElementById('quiz-screen');
+        const resultsScreen = document.getElementById('results-screen');
+
+        const studentNameInput = document.getElementById('student-name-input');
+        const startBtn = document.getElementById('start-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const nextBtnLabel = document.getElementById('next-btn-label');
+        const retakeBtn = document.getElementById('retake-btn');
+        const retakeBtnBottom = document.getElementById('retake-btn-bottom');
+        const copyResultBtn = document.getElementById('copy-result-btn');
+        const copyResultLabel = document.getElementById('copy-result-label');
+
+        const progressText = document.getElementById('progress-text');
+        const chapterBadge = document.getElementById('chapter-badge');
+        const progressBar = document.getElementById('progress-bar');
+        const questionTypeBadge = document.getElementById('question-type-badge');
+        const answeredIndicator = document.getElementById('answered-indicator');
+        const questionText = document.getElementById('question-text');
+        const answerContainer = document.getElementById('answer-container');
+        const validationMsg = document.getElementById('validation-msg');
+        const questionDots = document.getElementById('question-dots');
+
+        // Helper: Normalize text for flexible comparison
+        function normalizeText(str) {
+            if (!str) return "";
+            return str
+                .toString()
+                .trim()
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "")
+                .replace(/\s+/g, " ");
+        }
+
+        // Check if a user's answer for a given question is correct
+        function isAnswerCorrect(question, userAnswer) {
+            if (!userAnswer || userAnswer.trim() === "") return false;
+            if (question.type === "fill_blank") {
+                const normalizedUser = normalizeText(userAnswer);
+                return question.acceptedAnswers.some(ans => normalizeText(ans) === normalizedUser);
+            } else {
+                return userAnswer === question.correctAnswer;
+            }
+        }
+
+        // Render Question Dots for quick navigation
+        function renderQuestionDots() {
+            questionDots.innerHTML = "";
+            quizQuestions.forEach((q, idx) => {
+                const isAnswered = userAnswers[idx] !== null && userAnswers[idx].trim() !== "";
+                const isCurrent = idx === currentIndex;
+                const dot = document.createElement('button');
+                dot.type = "button";
+                dot.textContent = idx + 1;
+                dot.title = `Question ${idx + 1}`;
+                
+                let classes = "w-8 h-8 rounded-lg text-xs font-bold transition-all cursor-pointer ";
+                if (isCurrent) {
+                    classes += "bg-navy-900 text-gold-300 ring-2 ring-gold-500 scale-105";
+                } else if (isAnswered) {
+                    classes += "bg-parchment-200 text-navy-900 border border-gold-500/60 hover:bg-parchment-300";
+                } else {
+                    classes += "bg-parchment-50 text-slate-500 border border-parchment-300 hover:bg-parchment-100";
+                }
+                dot.className = classes;
+                dot.addEventListener('click', () => {
+                    validationMsg.classList.add('hidden');
+                    currentIndex = idx;
+                    renderQuestion();
+                });
+                questionDots.appendChild(dot);
+            });
+        }
+
+        // Render Current Question
+        function renderQuestion() {
+            const q = quizQuestions[currentIndex];
+            const total = quizQuestions.length;
+
+            // Update Progress UI
+            progressText.textContent = `Question ${currentIndex + 1} of ${total}`;
+            chapterBadge.textContent = q.chapter;
+            progressBar.style.width = `${((currentIndex + 1) / total) * 100}%`;
+            questionTypeBadge.textContent = q.typeLabel;
+            questionText.textContent = `${currentIndex + 1}. ${q.question}`;
+
+            // Update Answered Status
+            const currentAnswer = userAnswers[currentIndex];
+            if (currentAnswer && currentAnswer.trim() !== "") {
+                answeredIndicator.textContent = "Answered ✓";
+                answeredIndicator.className = "text-xs font-bold text-emerald-700";
+            } else {
+                answeredIndicator.textContent = "Not answered yet";
+                answeredIndicator.className = "text-xs font-medium text-slate-400";
+            }
+
+            // Clear previous options
+            answerContainer.innerHTML = "";
+            validationMsg.classList.add('hidden');
+
+            if (q.type === "mcq" || q.type === "true_false") {
+                const letters = ["A", "B", "C", "D"];
+                q.options.forEach((option, optIdx) => {
+                    const isSelected = currentAnswer === option;
+                    const label = document.createElement('button');
+                    label.type = "button";
+                    label.className = `option-card w-full text-left p-4 rounded-xl border-2 flex items-center gap-3.5 cursor-pointer ${
+                        isSelected
+                            ? "border-navy-900 bg-navy-900/5 shadow-sm"
+                            : "border-parchment-300 bg-parchment-50/60 hover:border-gold-500 hover:bg-parchment-100/70"
+                    }`;
+
+                    const badgeText = q.type === "mcq" ? letters[optIdx] : (option === "True" ? "T" : "F");
+                    label.innerHTML = `
+                        <span class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 transition-colors ${
+                            isSelected
+                                ? "bg-navy-900 text-gold-300"
+                                : "bg-white border border-parchment-300 text-navy-900"
+                        }">
+                            ${badgeText}
+                        </span>
+                        <span class="text-sm sm:text-base font-medium text-navy-950 flex-grow">${option}</span>
+                        <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                            isSelected ? "border-navy-900" : "border-slate-300"
+                        }">
+                            ${isSelected ? '<span class="w-2.5 h-2.5 rounded-full bg-navy-900"></span>' : ''}
+                        </span>
+                    `;
+
+                    label.addEventListener('click', () => {
+                        userAnswers[currentIndex] = option;
+                        renderQuestion();
+                    });
+
+                    answerContainer.appendChild(label);
+                });
+            } else if (q.type === "fill_blank") {
+                const wrapper = document.createElement('div');
+                wrapper.className = "bg-parchment-50 border-2 border-parchment-300 rounded-xl p-5 space-y-3 focus-within:border-navy-900 transition-colors";
+                
+                wrapper.innerHTML = `
+                    <label for="blank-input" class="block text-xs font-bold uppercase tracking-wider text-navy-800">
+                        Type the missing word below:
+                    </label>
+                    <input 
+                        type="text" 
+                        id="blank-input" 
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="Write your answer in English..."
+                        value="${currentAnswer ? currentAnswer.replace(/"/g, '&quot;') : ''}"
+                        class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-parchment-300 focus:border-navy-900 focus:outline-none text-base sm:text-lg font-semibold text-navy-950 placeholder:text-slate-400"
+                    />
+                    <p class="text-xs text-slate-500 flex items-center gap-1.5">
+                        <svg class="w-4 h-4 text-gold-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                        <span>Hint: ${q.hint}</span>
+                    </p>
+                `;
+
+                answerContainer.appendChild(wrapper);
+
+                const inputEl = document.getElementById('blank-input');
+                inputEl.addEventListener('input', (e) => {
+                    userAnswers[currentIndex] = e.target.value;
+                    if (e.target.value.trim() !== "") {
+                        answeredIndicator.textContent = "Answered ✓";
+                        answeredIndicator.className = "text-xs font-bold text-emerald-700";
+                        validationMsg.classList.add('hidden');
+                    } else {
+                        answeredIndicator.textContent = "Not answered yet";
+                        answeredIndicator.className = "text-xs font-medium text-slate-400";
+                    }
+                    renderQuestionDots();
+                });
+
+                inputEl.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        handleNext();
+                    }
+                });
+
+                setTimeout(() => inputEl.focus(), 50);
+            }
+
+            // Update Prev/Next Buttons
+            prevBtn.disabled = currentIndex === 0;
+            if (currentIndex === total - 1) {
+                nextBtnLabel.textContent = "Submit Quiz • تسليم الاختبار";
+                nextBtn.classList.remove("bg-navy-900", "hover:bg-navy-800");
+                nextBtn.classList.add("bg-emerald-800", "hover:bg-emerald-700");
+            } else {
+                nextBtnLabel.textContent = "Next Question";
+                nextBtn.classList.remove("bg-emerald-800", "hover:bg-emerald-700");
+                nextBtn.classList.add("bg-navy-900", "hover:bg-navy-800");
+            }
+
+            renderQuestionDots();
+        }
+
+        // Handle Next / Submit
+        function handleNext() {
+            const currentAns = userAnswers[currentIndex];
+            if (!currentAns || currentAns.trim() === "") {
+                validationMsg.classList.remove('hidden');
+                document.getElementById('validation-text').textContent = "Please select or enter an answer before proceeding.";
+                return;
+            }
+
+            if (currentIndex < quizQuestions.length - 1) {
+                currentIndex++;
+                renderQuestion();
+            } else {
+                const firstUnanswered = userAnswers.findIndex(ans => !ans || ans.trim() === "");
+                if (firstUnanswered !== -1) {
+                    currentIndex = firstUnanswered;
+                    renderQuestion();
+                    validationMsg.classList.remove('hidden');
+                    document.getElementById('validation-text').textContent = `Please answer Question ${firstUnanswered + 1} before submitting.`;
+                    return;
+                }
+                showResults();
+            }
+        }
+
+        // Calculate Score & Render Results Screen
+        function showResults() {
+            quizScreen.classList.add('hidden');
+            resultsScreen.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Display Student Name if entered
+            const resultStudentBadge = document.getElementById('result-student-badge');
+            const resultStudentName = document.getElementById('result-student-name');
+            if (studentName && studentName.trim() !== "") {
+                resultStudentName.textContent = studentName.trim();
+                resultStudentBadge.classList.remove('hidden');
+            } else {
+                resultStudentBadge.classList.add('hidden');
+            }
+
+            let score = 0;
+            const reviewContainer = document.getElementById('review-container');
+            reviewContainer.innerHTML = "";
+
+            quizQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx] || "(No answer)";
+                const correct = isAnswerCorrect(q, userAns);
+                if (correct) score++;
+
+                const correctDisplay = q.type === "fill_blank" ? q.displayAnswer : q.correctAnswer;
+
+                const card = document.createElement('article');
+                card.className = `bg-white rounded-2xl shadow-md border-2 overflow-hidden ${
+                    correct ? "border-emerald-200" : "border-rose-200"
+                }`;
+
+                card.innerHTML = `
+                    <!-- Card Header -->
+                    <div class="px-5 py-3.5 flex items-center justify-between gap-2 ${
+                        correct ? "bg-emerald-50/80 border-b border-emerald-100" : "bg-rose-50/80 border-b border-rose-100"
+                    }">
+                        <div class="flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-white ${
+                                correct ? "bg-emerald-600" : "bg-rose-600"
+                            }">
+                                ${idx + 1}
+                            </span>
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-600">${q.typeLabel}</span>
+                        </div>
+                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold ${
+                            correct ? "bg-emerald-600 text-white" : "bg-rose-600 text-white"
+                        }">
+                            ${correct ? "✓ Correct" : "✗ Incorrect"}
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-5 sm:p-6 space-y-4">
+                        <p class="font-bold text-navy-950 text-base sm:text-lg leading-snug">
+                            ${q.question}
+                        </p>
+
+                        <!-- Answers Comparison -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <div class="p-3.5 rounded-xl border ${
+                                correct
+                                    ? "bg-emerald-50/60 border-emerald-300 text-emerald-950"
+                                    : "bg-rose-50/60 border-rose-300 text-rose-950"
+                            }">
+                                <span class="block text-xs font-bold uppercase tracking-wider opacity-75 mb-1">Your Answer:</span>
+                                <span class="font-bold text-base">${userAns}</span>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-300 text-navy-950">
+                                <span class="block text-xs font-bold uppercase tracking-wider text-navy-700 mb-1">Correct Answer:</span>
+                                <span class="font-bold text-base text-emerald-800">${correctDisplay}</span>
+                            </div>
+                        </div>
+
+                        <!-- Arabic Explanation Box -->
+                        <div class="p-4 rounded-xl bg-navy-900/[0.03] border-r-4 border-gold-500 arabic-text">
+                            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-1">
+                                <span>💡</span>
+                                <span>${correct ? "توضيح الإجابة:" : "شرح الخطأ والإجابة الصحيحة:"}</span>
+                            </div>
+                            <p class="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
+                                ${q.explanationAr}
+                            </p>
+                        </div>
+                    </div>
+                `;
+
+                reviewContainer.appendChild(card);
+            });
+
+            // Update Score Summary
+            lastCalculatedScore = score;
+            const total = quizQuestions.length;
+            const pct = Math.round((score / total) * 100);
+            document.getElementById('score-number').textContent = score;
+            document.getElementById('score-percentage').textContent = `${pct}%`;
+            document.getElementById('correct-count').textContent = score;
+            document.getElementById('incorrect-count').textContent = total - score;
+
+            const feedbackEn = document.getElementById('feedback-en');
+            const feedbackAr = document.getElementById('feedback-ar');
+
+            if (score >= 9) {
+                feedbackEn.textContent = "Outstanding! You have mastered Chapters 1 & 2 of The Count of Monte Cristo.";
+                feedbackAr.textContent = "ممتاز جداً! إلمام رائع بأحداث وشخصيات الفصلين الأول والثاني.";
+            } else if (score >= 7) {
+                feedbackEn.textContent = "Great job! Review the highlighted explanations below to perfect your knowledge.";
+                feedbackAr.textContent = "أداء جيد جداً! راجع شرح الأخطاء بالأسفل لتثبيت جميع التفاصيل.";
+            } else if (score >= 5) {
+                feedbackEn.textContent = "Good effort! Read the Arabic explanations carefully and try again.";
+                feedbackAr.textContent = "مجهود طيب! اقرأ شرح الأخطاء بعناية ثم أعد المحاولة لرفع درجتك.";
+            } else {
+                feedbackEn.textContent = "Keep practicing! Review the story events below and retake the quiz.";
+                feedbackAr.textContent = "تحتاج لمراجعة أحداث الفصلين! اقرأ الشرح بالأسفل جيداً ثم أعد الاختبار.";
+            }
+        }
+
+        // Copy Score Summary to Clipboard (using execCommand fallback for iframe safety)
+        function copyScoreSummary() {
+            const namePart = studentName.trim() ? `Student: ${studentName.trim()}\n` : "";
+            const textToCopy = `${namePart}Quiz: The Count of Monte Cristo (Chapters 1 & 2)\nScore: ${lastCalculatedScore} / 10 (${Math.round((lastCalculatedScore / 10) * 100)}%)`;
+
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = textToCopy;
+            tempTextarea.style.position = 'fixed';
+            tempTextarea.style.opacity = '0';
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            try {
+                document.execCommand('copy');
+                copyResultLabel.textContent = "Copied! ✓";
+                setTimeout(() => {
+                    copyResultLabel.textContent = "Copy Score";
+                }, 2000);
+            } catch (err) {
+                copyResultLabel.textContent = "Copy Score";
+            }
+            document.body.removeChild(tempTextarea);
+        }
+
+        // Reset & Restart Quiz
+        function restartQuiz() {
+            currentIndex = 0;
+            userAnswers = new Array(quizQuestions.length).fill(null);
+            resultsScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            renderQuestion();
+        }
+
+        // Event Listeners
+        startBtn.addEventListener('click', () => {
+            studentName = studentNameInput.value || "";
+            startScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            renderQuestion();
+        });
+
+        studentNameInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                startBtn.click();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        });
+
+        nextBtn.addEventListener('click', handleNext);
+        retakeBtn.addEventListener('click', restartQuiz);
+        retakeBtnBottom.addEventListener('click', restartQuiz);
+        copyResultBtn.addEventListener('click', copyScoreSummary);
+    </script>
+</body>
+</html>
